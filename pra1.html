@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Program</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentTime = new Date().getHours();
+            var greeting;
+
+            if (currentTime < 10) {
+                greeting = "Good morning!";
+            } else if (currentTime < 20) {
+                greeting = "Good day!";
+            } else {
+                greeting = "Good evening!";
+            }
+
+            document.getElementById("greeting").innerHTML= greeting;
+        });
+    </script>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+</body>
+</html>

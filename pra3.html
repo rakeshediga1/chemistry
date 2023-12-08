@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+    <script>
+        function checkGrade() {
+            var grade = document.getElementById("gradeInput").value.toUpperCase();
+            var message;
+
+            switch (grade) {
+                case "A":
+                    message = "Good job!";
+                    break;
+                case "B":
+                    message = "Good!";
+                    break;
+                case "C":
+                    message = "Just pass.";
+                    break;
+                case "D":
+                    message = "Not so good.";
+                    break;
+                case "E":
+                    message = "Fail.";
+                    break;
+                default:
+                    message = "Unknown grade.";
+            }
+
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    <label for="gradeInput">Enter your grade (A, B, C, D, E): </label>
+    <input type="text" id="gradeInput">
+    <button onclick="checkGrade()">Check Grade</button>
+    <p id="result"></p>
+</body>
+</html>
